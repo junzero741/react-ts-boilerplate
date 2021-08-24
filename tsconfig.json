@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+   "esModuleInterop": true, // import 및 export default 가능하게 함 
+   "jsx": "react-jsx",    // TS가 jsx 파일을 어떻게 다룰지 결정
+   "module": "esnext",  // TS가 ES6 import와 export를 어떻게 트랜스파일할지 결정 (esnext로 설정하면 웹팩에게 맡김)
+   "moduleResolution": "node",  // 모듈을 node의 방식으로 풀이
+   "lib": [           // 어떤 라이브러리들이 타겟 환경에 존재할지 결정
+     "dom",
+     "esnext"
+   ],
+   "strict": true,    // 모든 TS 타입 체크 활성화
+   "sourceMap": true, // TS 가 소스맵을 내보낼지 결정. 프로덕션 모드에서는 웹팩이 이를 무시하게 설정할 수 있음.
+   "target" : "esnext", // 타겟의 ES 버전에 대한 설정. 
+   "baseUrl": ".",
+   "paths": {
+     "@src/*" : ["src/*"],
+   },
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"] // 타입 체크와 트랜스파일링을 무시할 목록 지정
+}
