@@ -39,9 +39,7 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [
-          ["@src", "./src"]
-        ]
+        "map": [["@src", "./src"]]
       },
       "typescript": {}
     }

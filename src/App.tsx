@@ -1,21 +1,14 @@
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import { Link } from 'react-router-dom'
+import Home from '@src/pages/Home'
+import About from '@src/pages/About'
+import RouteComponent from '@src/RouterComponent'
 
 export default function App() {
   return (
-    <div>
-      <div style={{height: '300px'}}>
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
-      </div>
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </div>
+    <RouteComponent
+      routes={[
+        { path: '/', element: <Home /> },
+        { path: '/about', element: <About /> },
+      ]}
+    />
   )
 }
